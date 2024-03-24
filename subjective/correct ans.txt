@@ -1,0 +1,25 @@
+Smart object
+The smart object is a device that has at a minimum the Following four defining character.
+(1) Processing unit
+A smart object has some type of processing unit for acquiring data, processing and analyzing
+sensing information received by sensors, co-ordinating control signal to any actuator and
+controlling a variety of functions on smart object including communication and power systems.
+2) Sensors and Actuators
+A smart object is capable of interacting with physical world through sensors and actuators, the
+sensors learns and measures its environment, whereas an actuator is able to produce some
+change in physical word.
+(3)Communication device
+The communication unit is responsible for connecting smart objects with other smart object and
+outside world (via Internet) Communication device for smart object can be either wired or
+wireless
+(4) Power Source
+Smart object has component that need to be powered. The most significant power consumption
+usually comes from the communication unit of smart objects.
+Classification of Actuator :
+1) Electric Linear
+2) Electric Rotary.
+3) Fluid power linear
+4) Fluid power Rotary.
+5)Linear chain actuator
+6) Manual linear
+7) Manual Rotony
