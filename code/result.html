@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            border:2px solid rgb(138, 138, 138);
+        }
+        .result-box {
+            text-align: center;
+            background-color: #fff;
+            background: rgb(60, 60, 60);
+            background: rgba(60, 60, 60, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+            width:60%;
+            height: 30vh;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size:300%;
+        }
+
+        p {
+            margin: 0;
+            color: #efefef;
+            font-size:230%;
+        }
+
+        nav {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            min-height: 9vh;
+            background: black;
+        }
+
+        .logo {
+            padding-left: 5%;
+            font-size: 1em;
+            font-weight: 700;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        .result-box {
+            width: 800px; /* Set your desired width */
+            height: 200px; /* Set your desired height */
+            overflow: auto; /* Enable vertical and horizontal scrollbars if content overflows */
+            border: 1px solid #ccc; /* Optional: Add border for visual clarity */
+            padding: 10px; /* Optional: Add padding */
+           
+        }
+    
+        /* Optional: Customize scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 50px;
+        }
+    
+        .result-box ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+    
+        .result-box ::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+        #marks,#evaluationTable{
+            color:white;
+            align-content:center;
+        }
+        #evaluationTable {
+            margin: 0 auto; /* Center the table horizontally */
+        }
+        #evaluationTable tr.separator td {
+            border-top: 2px solid #ccc; /* Change the color and thickness as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h3 font='Poppins'>Subjective Answer Evaluation</h3>
+            </div>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="result-box">
+            <div id="marks">
+                <table id="evaluationTable">
+                    <thead>
+                        <tr>
+                            <th><h3>Questions</h3></th>
+                            <th><h3>Marks obtained</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="separator">
+                            <td colspan="2"></td> <!-- Spanning across two columns -->
+                        </tr>
+                        
+                        {% for question, mark in context.items() %}
+                            <tr>
+                                <td>{{ question }}</td>
+                                <td>{{ mark }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>        
+                </table>
+            </div>
+        </div>            
+    </div>
+</body>
+</html>

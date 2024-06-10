@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8"> 
+    <title>MasterGrad</title>
+    <link rel="stylesheet" href="static/style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h6>Subjective Answer Evaluation</h6>
+            </div>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="wrapper">
+            <div class="content">
+                <h2><b>Upload Your Context PDF<b></h2>
+                <br>
+                <h3><b>Easy, pleasant and efficient evaluation </b></h3>
+                <br>
+                <div class="upload-form">
+                    <form method="post" enctype="multipart/form-data" action="{{ url_for('create_vector_db') }}">
+                        
+                        <label for="pdfFile3" style="font-size: 120%;"></label>
+                        <br>
+                        <input type="file" id="pdfFile3" name="pdfFile" name="reference_paper" accept="application/pdf">
+                        <br>
+                        <br>  
+                            <button type="submit" class="btn btn-outline-warning" id="submit_msg"><b>Upload</b></button>
+                    </form>
+                </div>                               
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const X = () => {
+            const menu = document.querySelector('.bar');
+            const nav = document.querySelector('.menu');
+            
+            menu.addEventListener('click', () => {
+               menu.classList.toggle('bar-active');
+                nav.classList.toggle('nav-active');
+            });
+        }
+        X();
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</body>
+</html>
